@@ -26,6 +26,7 @@ urlpatterns = [
     path('clientAccount/', clientAccount),
     path('managerAccount/', managerAccount),
     path('masterAccount/', masterAccount),
-    path('availableCars', availableCars),
+    path('availableCars/', availableCars),
+    path('CarRentalRequests/', getRequestsCarRental),
     path('', index)
 ]

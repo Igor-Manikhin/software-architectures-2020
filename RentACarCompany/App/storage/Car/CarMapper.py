@@ -30,7 +30,7 @@ class CarMapper:
 
     @staticmethod
     def setCarStatusById(index, status):
-        query_str = 'UPDATE "Cars" SET status = %s WHERE id = %s'
+        query_str = 'UPDATE "Cars" SET car_status = %s WHERE id = %s'
         CarMapper.cursor.execute(query_str, [status, index])
         CarMapper.gateway.commit()
 
@@ -55,12 +55,6 @@ class CarMapper:
                     'WHERE vin_number = %s'
 
         CarMapper.cursor.execute(query_str, data_list)
-        CarMapper.gateway.commit()
-
-    @staticmethod
-    def updateCarStatusById(index, status):
-        query_str = 'UPDATE "Cars" SET car_status = %s WHERE id = %s'
-        CarMapper.cursor.execute(query_str, [status, index])
         CarMapper.gateway.commit()
 
     @staticmethod

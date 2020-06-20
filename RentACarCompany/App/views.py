@@ -20,10 +20,6 @@ def masterAccount(request):
     return render(request, 'masterAccountPage.html')
 
 
-def availableCars(request):
-    data = {'cars': Facade().getCarsList()}
-    return render(request, 'availableCarsPage.html', context=data)
-
 def signIn(request):
     if request.method == "POST":
         roles = ['Client', 'Manager', 'Master']
@@ -32,7 +28,6 @@ def signIn(request):
         client = request.POST.get('Client')
         return HttpResponse("<h2>Hello, {0}</h2>".format(login))
     else:
-        requests = Facade().getIncomingTechRequests("Игорь")
         return render(request, 'authPage.html')
 
 
@@ -64,3 +59,22 @@ def signUpForMasters(request):
         return HttpResponse("<h2>Hello</h2>")
     else:
         return render(request, 'signUpPageForMasters.html')
+
+
+def availableCars(request):
+    data = {'cars': Facade().getCarsList()}
+    return render(request, 'availableCarsPage.html', context=data)
+
+
+def getRequestsCarRental(request):
+    data = {'data': Facade().getIncomingRequests('Игорь', 'Car_Rental')}
+    return render(request, 'CarRentalRequests.html', context=data)
+
+
+def getRequestsCloseCarRental(request):
+    data = {'data': Facade().getIncomingRequests('Игорь', 'Close_Car_Rental')}
+    return render(request, 'CarRentalRequests.html', context=data)
+
+
+def createContract(request):
+    Facade().createContract('Игорь', 'Семён')

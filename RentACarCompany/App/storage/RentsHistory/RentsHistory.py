@@ -28,3 +28,7 @@ class RentsHistoryMapper:
         query_str = 'DELETE FROM "Rentals_History" WHERE client_id = %(index)s'
         RentsHistoryMapper.cursor.execute(query_str, {'index': index})
         RentsHistoryMapper.gateway.commit()
+
+    @staticmethod
+    def closeConnection():
+        RentsHistoryMapper.cursor.close()

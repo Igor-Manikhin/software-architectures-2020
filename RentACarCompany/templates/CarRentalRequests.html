@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Список имеющихся автомобилей</title>
+    <title>Просмотр заявок на прокат автомобилей</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css", href="styles/main_style.css">
 </head>
@@ -10,31 +10,27 @@
     <header></header>
     <div class="main">
         <div class="container">
-            <h2 class="py-5">Список имеющихся автомобилей в автопарке</h2>
-            <div class="row">
+            <h2 class="py-5 pl-0">Заявки на приобретение автомобилей в прокат/аренду</h2>
+            <div class="row justify-content-center">
                 <table class="table text-center">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Марка</th>
-                            <th scope="col">Модель</th>
-                            <th scope="col">Тип двигателя</th>
-                            <th scope="col">Мощность (в л.с.)</th>
-                            <th scope="col">Коробка передач</th>
-                            <th scope="col">Тип привода</th>
+                            <th scope="col">Идентификатор клиента</th>
+                            <th scope="col">Идентификатор автомобиля</th>
+                            <th scope="col">Причина проката</th>
+                            <th scope="col">Срок проката</th>
                             <th scope="col">Просмотр заявки</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for car in cars %}
+                        {% for elem in data %}
                             <tr class="align-items-center">
                                 <th>{{ forloop.counter }}</th>
-                                <td>{{ car.brand }}</td>
-                                <td>{{ car.model }}</td>
-                                <td>{{ car.engine_type }}</td>
-                                <td>{{ car.engine_power }}</td>
-                                <td>{{ car.transmission_type }}</td>
-                                <td>{{ car.drive_type }}</td>
+                                <td>{{ elem.client_id }}</td>
+                                <td>{{ elem.car_id }}</td>
+                                <td>{{ elem.reason_hire }}</td>
+                                <td>{{ elem.rental_period }}</td>
                                 <td><button class="btn btn-primary">Просмотреть</button></td>
                             </tr>
                         {% endfor %}

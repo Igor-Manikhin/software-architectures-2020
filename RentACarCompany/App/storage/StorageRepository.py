@@ -84,7 +84,7 @@ class StorageRepository:
     def concludeContract(self, client_id):
         contract = self.getContract(client_id)
         ContractMapper.updateContractStatusById(contract.contractId, 'заключён')
-        CarMapper.updateCarStatusById(contract.carId, 'находится в прокате')
+        CarMapper.setCarStatusById(contract.carId, 'находится в прокате')
         CarRentalMapper.delCarRentalRequestByClientId(client_id)
 
     def addNewCarInList(self, car):

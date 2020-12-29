@@ -1,0 +1,32 @@
+<div class="row justify-content-center align-items-center min-vh-100">
+	<div class="col-3">
+		<form>
+		  <div class="form-group">
+			    <label for="exampleInputEmail1">Email address</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="email">
+		  </div>
+		  <div class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" ng-model="password">
+		  </div>
+		  <div class="form-group">
+				<span>Авторизоваться как: </span>  
+				<div class="d-flex pt-2">
+					<div class="form-check px-0">
+						<label class="form-check-label mr-4 py-0" for="exampleRadios">Клиент</label>
+					    <input type="radio" class="form-check-input" name="exampleRadios" id="exampleCheck1" value="client" ng-model="user_mode" checked="checked">
+					</div>
+					<div class="form-check">
+						<label class="form-check-label mr-4 py-0" for="exampleCheck2">Менеджер</label>
+					    <input type="radio" class="form-check-input" name="exampleRadios" id="exampleCheck2" value="manager" ng-model="user_mode">
+					</div>
+					<div class="form-check">
+						<label class="form-check-label mr-4 py-0" for="exampleCheck3">Механик</label>
+					    <input type="radio" class="form-check-input" name="exampleRadios" id="exampleCheck3"  value="master" ng-model="user_mode">
+					</div>
+				</div>
+		  </div>
+		  <button type="submit" class="btn btn-primary" ng-click="authUser()">Submit</button>
+		</form>
+	</div>
+</div>

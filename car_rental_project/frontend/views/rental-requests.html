@@ -1,0 +1,23 @@
+<div class="row justify-content-center content-wrapper">
+	<div class="col-10">
+		<div class="row justify-content-start">
+			<h5 class="mb-5">Запросы на приобретение автомобиля в прокат</h5>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 px-0">
+				<ul class="list-group" ng-repeat="request in rentalRequests">
+				  <li class="list-group-item">
+				  		<div class="row align-items-center">
+				  			<div class="col-10">
+				  				<span class="pr-3">Имя: {{request.client.name}}</span>
+				  				<span>Запрос на приорбретение в прокат: {{request.car.name}} {{request.car.model}}</span>
+				  			</div>
+				  			<div class="col-2">
+				  				<a class="btn btn-primary float-right" href="/account/rental-request/{{request.id}}">Просмотреть</a>
+				  			</div>
+				  		</div>
+				   </li>
+				</ul>
+			</div>
+	</div>
+</div>

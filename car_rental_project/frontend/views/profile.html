@@ -1,0 +1,48 @@
+<div class="row justify-content-center content-wrapper">
+	<div class="col-9">
+		<div class="row justify-content-center">
+			<h5 class="mb-5">Информация о пользователе</h5>
+		</div>
+		<div class="row justify-content-center">
+			<div class="text-center">
+				<img src="../img/empty-avatar.jpg" height="220" width="220"><br>
+				<span class="d-inline-block pt-3">Сменить изображение</span>
+			</div>
+			<div class="col ml-5">
+				<form>
+					<div class="form-row">
+						<div class="col">
+							<label for="name">Имя</label>
+							<input type="text" class="form-control" id="name" placeholder="Имя" ng-model='name'>
+						</div>
+						<div class="col">
+							<label for="surname">Фамилия</label>	
+							<input type="text" class="form-control" id="surname" placeholder="Фамилия">
+						</div>
+					</div>
+					<div class="form-row mt-2">
+						<div class="col">
+							<label for="email">E-mail</label>	
+							<input type="email" class="form-control" id="email" placeholder="E-mail" ng-model='email'>
+						</div>
+						<div class="col">
+							<label for="password">Пароль</label>	
+							<input type="password" class="form-control" id="password" placeholder="Пароль" ng-model='password'>
+						</div>
+					</div>
+					<div class="form-row mt-2">
+						<div class="col-12">
+							<label for="user-role">Роль в приложении</label>	
+							<input type="text" class="form-control" id="user-role" disabled value="Клиент">
+						</div>
+					</div>
+					<div class="form-row mt-2">
+						<div class="col">
+							<button type="submit" class="btn btn-primary">Сохранить</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

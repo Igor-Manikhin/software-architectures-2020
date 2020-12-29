@@ -1,0 +1,33 @@
+<div class="row justify-content-center content-wrapper">
+	<div class="col-10">
+		<div class="row justify-content-start">
+			<h5 class="mb-5">Запрос на приобретение автомобиля в прокат</h5>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col pl-0">
+				<h5 class="mb-5">Информация о клиенте</h5>
+				<div>
+					Имя: {{ rentalRequest.client.name }}
+				</div>
+			</div>
+			<div class="col">
+				<h5 class="mb-5">Информация о прокате</h5>
+				<div class="d-flex flex-column">
+					<span>Причина проката: {{ rentalRequest.purpose_acquisition }}</span>
+					<span>Период проката: {{ rentalRequest.rental_period }}</span>
+				</div>
+			</div>
+			<div class="col">
+				<h5 class="mb-5">Информация об автомобиле</h5>
+				<div class="d-flex flex-column">
+					<span>Марка: {{ rentalRequest.car.name }}</span>
+					<span>Модель: {{ rentalRequest.car.model }}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<button class="btn btn-primary mr-2" ng-click="approve()">Одобрить</button>
+			<button class="btn btn-danger" ng-click="cancel()">Отклонить</button>
+		</div>
+	</div>
+</div>

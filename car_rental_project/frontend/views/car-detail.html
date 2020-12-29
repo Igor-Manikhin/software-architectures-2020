@@ -1,0 +1,26 @@
+<div class="row mb-4" style="margin-left: 210px;">
+	<div class="col-12">
+		<h3>{{car.name}} {{car.model}}</h3>
+	</div>
+</div>
+<div class="row justify-content-center" style="margin-left: 170px;">
+	<div class="col-6">
+		<div class="ml-4">
+			<img src="{{car.car_image}}" class="ml-3" height="480" width="720">
+		</div>
+	</div>
+	<div class="col-6">
+		<h3>Характеристики: </h3>
+		<h5 class="mt-5">Тип автомобиля: {{car.body_type}}</h5>
+		<h5>Трансмиссия: {{car.transmission}}</h5>
+		<h5>Привод: {{car.drive}}</h5>
+		<h5>Тип двигателя: {{car.drive}}</h5>
+		<h5>Количество мест для пассажиров: {{car.brakes}}</h5>
+		<h5>Тип топлива: {{car.fuel_type}}</h5>
+		
+		<h5 class="d-inline-block mt-5">Статус: {{status}}</h5>
+		<div class="mt-5" ng-if="car.car_status == 'leisure'">
+			<a class="btn btn-primary" href="/account/create-rental-request/{{car.id}}">Оставить заявку на приобретение в прокат</a>
+		</div>
+	</div>
+</div>

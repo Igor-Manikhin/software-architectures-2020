@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+	<a class="navbar-brand" href="/account/profile">Car rental</a>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav mr-auto sidenav" id="navAccordion">
+			<li class="nav-item active pt-4">
+				<a class="nav-link" href="/account/profile">Профиль пользователя</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/account/rental-requests">Заявки на прокат</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#s">Заявки на закрытие проката</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Заявки на технический осмотр</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/account/active-rental">Активный прокат</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/account/rental-cars-list">Список автомобилей</a>
+			</li>
+		</ul>
+      	<a class="btn btn-outline-light ml-auto mt-2 mt-md-0" href="/logout">Выйти из аккаунта</a>
+	</div>
+</nav>
+<div class="container-fluid" style="padding-top: 5rem;">
+	<div ng-include src="'views/profile.html'" ng-if="nav_account.page == 1"></div>
+	<div ng-include src="'views/active-rental.html'" ng-if="nav_account.page == 2"></div>
+	<div ng-include src="'views/rental-requests.html'" ng-if="nav_account.page == 3"></div>
+	<div ng-include src="'views/rental-cars-list.html'" ng-if="nav_account.page == 4"></div>
+	<div ng-include src="'views/car-detail.html'" ng-if="nav_account.page == 5"></div>
+	<div ng-include src="'views/create-request.html'" ng-if="nav_account.page == 6"></div>
+	<div ng-include src="'views/rental-request-detail.html'" ng-if="nav_account.page == 7"></div>
+</div>

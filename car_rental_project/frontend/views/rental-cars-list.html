@@ -1,0 +1,36 @@
+<div class="row justify-content-center content-wrapper">
+	<div class="col-9">
+		<div class="row justify-content-start">
+			<h5 class="mb-5">Список имеющихся автомобилей</h5>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<ul class="list-group" ng-repeat="car in cars">
+				  <li class="list-group-item">
+				  		<div class="row align-items-center">
+				  			<div class="col-3">
+				  				<img src="{{car.car_image}}" height="235" width="320">
+				  			</div>
+				  			<div class="col-9 pl-5">
+				  				<div class="row justify-content-between">
+				  					<div><h5>{{car.name}} {{car.model}}</h5></div>
+				  					<div><h6 class="float-right">Статус: {{car.car_status}}</h6><br></div>
+				  				</div>
+				  				<div class="row justify-content-between">
+				  					<div>
+				  						<h6 class="pt-3">Тип автомобиля: {{car.body_type}}</h6>
+				  						<h6>Трансмиссия: {{car.transmission}}</h6>
+				  						<h6>Привод: {{car.drive}}</h6>
+				  					</div>
+				  					<div>
+				  						<a class="btn btn-primary" href="/account/rental-cars-list/{{car.id}}">Подробнее об автомобиле</a>
+				  					</div>
+				  				</div>
+				  			</div>
+				  		</div>
+				  </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
